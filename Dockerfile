@@ -4,9 +4,6 @@ WORKDIR /home
 
 COPY target/*.jar /home
 
-# Update apt sources
-ADD sources.list /etc/apt/
-
 # Install dependencies
 RUN set -ex; \
   apt-get update; \
