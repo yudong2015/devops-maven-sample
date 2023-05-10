@@ -6,7 +6,7 @@ COPY target/*.jar /home
 
 # Install dependencies
 RUN set -ex; \
-  apt-get update; \
-  apt-get -y install libsnappy1v5
+  apk update; \
+  apk add mysql mysql-client 
 
 ENTRYPOINT java -jar *.jar
